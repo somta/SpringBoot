@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+spring:  
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+      
+  devtools:
+    restart:
+      enabled: true
+      #添加那个目录的文件需要restart
+      additional-paths: src/main/java
+      #排除那个目录的文件不需要restart
+      exclude: static/**

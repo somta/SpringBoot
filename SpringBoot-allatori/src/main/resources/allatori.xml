@@ -1,0 +1,23 @@
+<config>
+    <input>
+        <!-- in : 要进行混淆处理的jar名称   out: 混淆完成后的jar文件 -->
+        <jar in="SpringBoot-allatori.jar" out="SpringBoot-allatori-obf.jar"/>
+    </input>
+
+    <!-- keep-names标记用来设置类、方法和字段在混淆处理过程中不会被重命名 -->
+    <keep-names>
+        <class access="protected+">
+            <field access="protected+"/>
+            <method access="public"/>
+        </class>
+    </keep-names>
+
+
+    <!-- 忽略掉springboot的启动文件，不然无法启动 -->
+    <ignore-classes>
+        <class template="class com.somta.springboot.Application"/>
+    </ignore-classes>
+
+
+    <property name="log-file" value="log.xml"/>
+</config>

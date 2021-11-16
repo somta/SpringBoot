@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: SpringBoot-prometheus
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:  '*'
+    enabled-by-default: true
+  metrics:
+    tags:
+       application: ${spring.application.name}
