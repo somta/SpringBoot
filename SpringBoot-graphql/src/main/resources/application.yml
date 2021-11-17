@@ -1,0 +1,6 @@
+server:
+  port: 8080
+
+#graphql:
+#  tools:
+#    schema-location-pattern: "**/*.graphqls"

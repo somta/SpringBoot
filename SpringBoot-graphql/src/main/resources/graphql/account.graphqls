@@ -1,0 +1,20 @@
+type Account {
+    id: Int!
+    username: String!
+    age: Int
+    roles: [Role]!
+}
+
+type Role {
+    id: Int!
+    roleName: String!
+    userId: Int
+}
+
+type Query {
+    getAccountList: [Account]!
+    getAccountById(userId: Int!): Account!
+
+    getRoleList: [Role]!
+    getRolesByUid(userId: Int!): [Role]!
+}
