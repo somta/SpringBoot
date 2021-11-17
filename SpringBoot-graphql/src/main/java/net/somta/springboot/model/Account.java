@@ -9,10 +9,11 @@ public class Account {
     private Integer age;
     private List<Role> roles;
 
-    public Account(Integer id, String username, Integer age) {
+    public Account(Integer id, String username, Integer age, List<Role> roles) {
         this.id = id;
         this.username = username;
         this.age = age;
+        this.roles = roles;
     }
 
     public Integer getId() {

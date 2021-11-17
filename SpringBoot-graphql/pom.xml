@@ -26,11 +26,11 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <!-- graphql start -->
-        <!-- 12.0.0的版本会出现异常 -->
+        <!-- com.graphql-java-kickstart 为最新的 groupId, com.graphql-java 已经停止更新 -->
         <dependency>
             <groupId>com.graphql-java-kickstart</groupId>
             <artifactId>graphql-spring-boot-starter</artifactId>
-            <version>8.1.1</version>
+            <version>11.1.0</version>
         </dependency>
         <!-- graphql end -->
     </dependencies>

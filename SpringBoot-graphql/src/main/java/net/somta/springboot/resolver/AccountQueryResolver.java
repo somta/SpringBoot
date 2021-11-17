@@ -18,10 +18,6 @@ public class AccountQueryResolver implements GraphQLQueryResolver {
         return accountService.getAccountList();
     }
 
-    /*public List<Account> getAccounts(){
-        return accountService.getAccountList();
-    }*/
-
     public Account getAccountById(Integer id){
         return accountService.getAccountById(id);
     }
