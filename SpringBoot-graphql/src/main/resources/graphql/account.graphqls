@@ -5,6 +5,12 @@ type Account {
     roles: [Role]!
 }
 
+input AccountVO {
+    id: Int!,
+    username: String!,
+    age: Int
+}
+
 type Role {
     id: Int!
     roleName: String!
@@ -17,4 +23,8 @@ type Query {
 
     getRoleList: [Role]!
     getRolesByUid(userId: Int!): [Role]!
+}
+
+type Mutation {
+    addAccount(accountVO: AccountVO!): Account!
 }
