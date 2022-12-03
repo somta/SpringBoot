@@ -24,7 +24,6 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
         //MapperAutoConfiguration.class,
         //PageHelperAutoConfiguration.class
         })
-@TestPropertySource(locations = {"/application-unit.properties"},
-                    properties = {"mybatis.mapperLocations=classpath*:mybatis/**/Mysql_*Mapper.xml"})
+@TestPropertySource(locations = {"/application-unit.properties"})
 public class BaseRepositoryTest {
 }
