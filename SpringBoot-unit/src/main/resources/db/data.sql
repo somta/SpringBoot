@@ -1,0 +1,1 @@
+INSERT INTO `t_user` (`id`, `age`, `name`) VALUES (1, 18, 'husong');
