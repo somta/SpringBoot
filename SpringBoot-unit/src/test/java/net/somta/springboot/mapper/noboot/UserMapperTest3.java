@@ -1,18 +1,19 @@
+package net.somta.springboot.mapper.noboot;
+
 import net.somta.springboot.mapper.UserMapper;
 import net.somta.springboot.pojo.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-@SpringBootTest
-//@MapperScan("net.somta.springboot.mapper")
-class UserMapperTest {
+/**
+ * H2的一个很重要的使用场景就是做MyBatis的单元测试，直接使用H2的内存数据库，使用完毕直接释放
+ * 不启动SpringBoot使用H2数据库进行单元测试
+ */
+class UserMapperTest3 extends BaseRepositoryTest3 {
 
     @Autowired
     private UserMapper userMapper;

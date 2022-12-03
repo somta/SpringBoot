@@ -1,4 +1,4 @@
-package noboot;
+package net.somta.springboot.mapper.noboot;
 
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.test.context.TestPropertySource;
