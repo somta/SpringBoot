@@ -1,5 +1,8 @@
 package net.somta.springboot.model;
 
+/**
+ *
+ */
 public class User {
     private Integer id;
     private String name;
