@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+knife4j:
+  enable: true
+  openapi:
+    title: knife4j文档
+    concat: xiaoymin@foxmail.com
+    email: xiaoymin@foxmail.com
+    url: https://gitee.com/xiaoym/knife4j
+    version: 1.0
+    group:
+      open:
+        group-name: knife4j文档
+        api-rule: package
+        api-rule-resources:
+          - net.somta
+        description: knife4j文档
