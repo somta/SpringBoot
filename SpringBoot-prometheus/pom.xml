@@ -1,14 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>net.somta</groupId>
+    <artifactId>SpringBoot-example</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+
   <groupId>com.somta.springboot</groupId>
   <artifactId>SpringBoot-prometheus</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
-  <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.1.5.RELEASE</version>
-  </parent>
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -32,11 +32,11 @@
           <groupId>io.micrometer</groupId>
           <artifactId>micrometer-registry-prometheus</artifactId>
       </dependency>
-      <!-- micrometer获取JVM相关信息，用于展示在Grefana上 -->
-      <dependency>
+      <!-- micrometer获取JVM相关信息，用于展示在Grefana上 todo待完善 -->
+      <!--<dependency>
           <groupId>io.github.mweirauch</groupId>
           <artifactId>micrometer-jvm-extra</artifactId>
-      </dependency>
+      </dependency>-->
 
   </dependencies>
 
