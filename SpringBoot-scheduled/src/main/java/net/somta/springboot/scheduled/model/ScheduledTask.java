@@ -1,42 +1,52 @@
 package net.somta.springboot.scheduled.model;
 
-import java.io.Serializable;
+public class ScheduledTask {
 
-/**
- * @Description:
- * @Author: Rachel
- * @DateTime: 2022/8/21 17:06
- */
-public class ScheduledTask implements Serializable {
+	private String taskId;
 
-    private String taskName;
+	private String taskName;
 
-    private String cron;
+	private String taskCron;
 
-    private String createTime;
+	private String taskType;
 
-    public String getTaskName() {
-        return taskName;
-    }
 
-    public void setTaskName(String taskName) {
-        this.taskName = taskName;
-    }
+	public ScheduledTask(String taskId, String taskName, String taskCron, String taskType) {
+		this.taskId = taskId;
+		this.taskName = taskName;
+		this.taskCron = taskCron;
+		this.taskType = taskType;
+	}
 
-    public String getCron() {
-        return cron;
-    }
+	public String getTaskId() {
+		return taskId;
+	}
 
-    public void setCron(String cron) {
-        this.cron = cron;
-    }
+	public void setTaskId(String taskId) {
+		this.taskId = taskId;
+	}
 
-    public String getCreateTime() {
-        return createTime;
-    }
+	public String getTaskName() {
+		return taskName;
+	}
 
-    public void setCreateTime(String createTime) {
-        this.createTime = createTime;
-    }
+	public void setTaskName(String taskName) {
+		this.taskName = taskName;
+	}
+
+	public String getTaskCron() {
+		return taskCron;
+	}
+
+	public void setTaskCron(String taskCron) {
+		this.taskCron = taskCron;
+	}
+
+	public String getTaskType() {
+		return taskType;
+	}
+
+	public void setTaskType(String taskType) {
+		this.taskType = taskType;
+	}
 }
-
