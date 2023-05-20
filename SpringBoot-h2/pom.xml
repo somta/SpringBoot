@@ -44,8 +44,35 @@
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <scope>1.4.210</scope>
+            <version>2.1.210</version>
         </dependency>
+
+
     </dependencies>
+
+    <profiles>
+        <profile>
+            <id>refresh-db</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <version>3.0.0</version>
+                        <configuration>
+                            <target>
+                                <property file="src/main/resources/application.yml" />
+                                <sql driver="org.h2.Driver" url="jdbc:h2:file:./db_test;MODE=MYSQL;IGNORECASE=TRUE;AUTO_SERVER=TRUE" userid="root" password="123456" onerror="continue" encoding="${project.build.sourceEncoding}">
+                                    <classpath refid="maven.test.classpath" />
+                                    <transaction src="src/main/resources/db/schema.sql"/>
+                                    <transaction src="src/main/resources/db/data.sql"/>
+                                </sql>
+                            </target>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
 </project>

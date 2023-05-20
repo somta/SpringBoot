@@ -15,7 +15,7 @@ spring:
       enabled: true #开启h2 web界面
   datasource:
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:file:./db_test;MODE=MYSQL;IGNORECASE=TRUE;AUTO_SERVER=TRUE
+    url: jdbc:h2:file:./db_test;MODE=MYSQL;IGNORECASE=TRUE;AUTO_SERVER=TRUE;OLD_INFORMATION_SCHEMA=TRUE
     #url: jdbc:h2:mem:test;DB_CLOSE_ON_EXIT=FALSE;MODE=MYSQL # 仍然使用mysql模式是为了从h2切换到mysql时完全兼容
     username: root
     password: 123456
