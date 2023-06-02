@@ -29,3 +29,9 @@
 ## 我的公众号
 
 ![输入图片说明](https://gitee.com/uploads/images/2018/0412/163958_59c5e3de_483361.jpeg "明天的地平线")
+
+## 特别鸣谢
+
+- 感谢 [JetBrains](https://jb.gg/OpenSourceSupport) 提供的免费开源 License：
+
+<img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png"  width="100" height="100" />
