@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+spring:  
+  datasource:
+    type : com.zaxxer.hikari.HikariDataSource
+    driver-class-name: org.apache.derby.jdbc.EmbeddedDriver
+    url: jdbc:derby:./db_test;create=true
+    username: root
+    password: 123456

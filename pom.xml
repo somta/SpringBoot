@@ -21,6 +21,8 @@
         <module>SpringBoot-prometheus</module>
         <module>SpringBoot-shardingsphere</module>
         <module>SpringBoot-unit</module>
+        <module>SpringBoot-derby</module>
+        <module>SpringBoot-antlr4</module>
     </modules>
 
     <properties>
