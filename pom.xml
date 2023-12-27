@@ -24,6 +24,7 @@
         <module>SpringBoot-derby</module>
         <module>SpringBoot-antlr4</module>
         <module>SpringBoot-otherLanguage</module>
+        <module>SpringBoot-groovy</module>
     </modules>
 
     <properties>
