@@ -16,6 +16,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>SpringBoot-h2</module>
+        <module>SpringBoot-i18n</module>
         <module>SpringBoot-knife4j</module>
         <module>SpringBoot-openApi</module>
         <module>SpringBoot-prometheus</module>
@@ -25,6 +26,8 @@
         <module>SpringBoot-antlr4</module>
         <module>SpringBoot-otherLanguage</module>
         <module>SpringBoot-groovy</module>
+        <module>SpringBoot-sql</module>
+        <module>SpringBoot-sse</module>
     </modules>
 
     <properties>
