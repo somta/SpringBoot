@@ -28,6 +28,7 @@
         <module>SpringBoot-groovy</module>
         <module>SpringBoot-sql</module>
         <module>SpringBoot-sse</module>
+        <module>SpringBoot-webService</module>
     </modules>
 
     <properties>
