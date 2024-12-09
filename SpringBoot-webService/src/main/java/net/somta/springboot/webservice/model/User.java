@@ -4,17 +4,17 @@ import java.io.Serializable;
 
 public class User implements Serializable {
     private static final long serialVersionUID = -3628469724795296287L;
-    private  int id;
+    private  String id;
     private String userName;
     private String passWord;
     private String userSex;
     private String nickName;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

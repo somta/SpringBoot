@@ -1,5 +1,6 @@
 package net.somta.springboot.webservice.service.impl;
 import net.somta.springboot.webservice.model.User;
+import net.somta.springboot.webservice.model.UserParam;
 import net.somta.springboot.webservice.service.UserService;
 import org.springframework.stereotype.Service;
 import javax.jws.WebService;
@@ -14,22 +15,30 @@ public class UserServiceImpl implements UserService {
 
     private Map<String, User> userMap = new HashMap<String, User>();
     public UserServiceImpl() {
-        System.out.println("向实体类插入数据");
         User user = new User();
-        user.setId(111);
+        user.setId("111");
         user.setUserName("test1");
 
-        userMap.put(user.getId() + "", user);
+        userMap.put(user.getId(), user);
 
         user = new User();
-        user.setId(112);
+        user.setId("112");
         user.setUserName("test2");
-        userMap.put(user.getId() + "", user);
+        userMap.put(user.getId(), user);
 
         user = new User();
-        user.setId(113);
+        user.setId("113");
         user.setUserName("test3");
-        userMap.put(user.getId() + "", user);
+        userMap.put(user.getId(), user);
+    }
+
+    @Override
+    public User addUser(UserParam userParam) {
+        User user = new User();
+        user.setId(userParam.getId());
+        user.setUserName(userParam.getUserName());
+        userMap.put(userParam.getId(),user);
+        return user;
     }
 
     @Override
