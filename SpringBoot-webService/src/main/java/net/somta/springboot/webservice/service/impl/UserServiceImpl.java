@@ -7,10 +7,11 @@ import javax.jws.WebService;
 import java.util.HashMap;
 import java.util.Map;
 
-@WebService(serviceName="userService",//对外发布的服务名
-        targetNamespace="http://service.somta.net",//指定你想要的名称空间，通常使用使用包名反转
-        endpointInterface="net.somta.springboot.webservice.service.UserService")//这个必须是接口类的完整的类路径
+//@WebService(serviceName="userService",//对外发布的服务名
+//        targetNamespace="http://service.webservice.springboot.somta.net/",//指定你想要的名称空间，通常使用使用包名反转,最后要带一个/
+//        endpointInterface="net.somta.springboot.webservice.service.UserService")//这个必须是接口类的完整的类路径
 @Service
+@WebService(serviceName="userService",targetNamespace="http://service.webservice.springboot.somta.net/")
 public class UserServiceImpl implements UserService {
 
     private Map<String, User> userMap = new HashMap<String, User>();
@@ -42,7 +43,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public String getUser(String userId) {
-        return "userId为：" +userMap.get(userId).getUserName();
+    public User getUser(String userId) {
+        User user = new User();
+        user.setId(userId);
+        user.setUserName("testUser");
+        return user;
     }
 }
