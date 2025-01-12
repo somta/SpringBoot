@@ -11,6 +11,7 @@ import javax.jws.WebService;
 public interface UserService {
 
     @WebMethod(action = "http://service.webservice.springboot.somta.net/addUser")
+    @WebResult(name="addUserResponse",targetNamespace = "http://service.webservice.springboot.somta.net/")
     User addUser(@WebParam(name = "userParam",targetNamespace = "http://service.webservice.springboot.somta.net/") UserParam userParam);
 
     /**
