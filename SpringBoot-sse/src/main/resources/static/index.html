@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SpringBoot + SSE </title>
+</head>
+<body>
+<h1>sse实时推送</h1>
+<button onclick="addClient()">新增一个客户端</button>
+<button onclick="sendMessage()">模拟后端向前端发送一个消息</button>
+
+<div id="stock-price-list">
+
+</div>
+
+<script>
+    let clientMap = new Map();
+
+    function sendMessage(){
+        const httpRequest = new XMLHttpRequest();
+        httpRequest.open('GET', 'http://127.0.0.1:8080/push/123', true);
+        httpRequest.send();
+    }
+
+    function addClient() {
+        let clientId = Math.random().toString(36).substr(2, 9);
+        console.log("clientId:"+clientId);
+        const source = new EventSource('http://127.0.0.1:8080/connect/' + clientId);
+        //监听服务端发送过来的消息
+        source.onmessage = function (event) {
+            console.log("onmessage:"+event.data);
+            document.getElementById(clientId).innerHTML = event.data;
+        };
+        //监听服务端发送过来的错误
+        source.onerror = function (event) {
+            console.log("onerror:"+event.data);
+        };
+
+        clientMap.set(clientId, source);
+
+        var parent = document.getElementById("stock-price-list")
+
+        var client = '<div><span>客户端：'+ clientId +'</span><span>客户端消息：<span id="'+clientId+'"></span>  </span> <button>关闭客户端</button></div>'
+        parent.innerHTML += client;
+    }
+
+</script>
+</body>
+</html>
